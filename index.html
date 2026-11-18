@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha equipe de Fórmula 1 favorita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loading-veil" role="status" aria-label="Carregando Scuderia Ferrari HP">
+        <div class="veil-shield">
+            <div class="veil-fill"></div>
+        </div>
+        <p class="veil-text">SCUDERIA FERRARI</p>
+    </div>
+
+    <div class="tricolore"></div>
+
+    <header>
+        <video class="header-video" muted loop playsinline preload="none" poster="img/header-poster.jpg" aria-hidden="true">
+            <source src="video/ferrari-hero.mp4" type="video/mp4">
+        </video>
+        <div class="header-video-overlay" aria-hidden="true"></div>
+        <div class="header-bg" aria-hidden="true">
+            <svg class="contours" viewBox="0 0 800 300" preserveAspectRatio="none">
+                <path class="contour-line" d="M-20,60 C150,20 250,120 400,70 C550,20 650,110 820,60" />
+                <path class="contour-line" d="M-20,140 C150,180 250,90 400,150 C550,200 650,110 820,150" />
+                <path class="contour-line" d="M-20,220 C150,190 250,250 400,210 C550,180 650,240 820,220" />
+            </svg>
+            <svg class="circuit-trace" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
+                <path d="M40,150 C40,90 90,60 140,60 L260,60 C310,60 350,90 350,130 C350,165 320,185 280,180 L220,170 C190,165 175,145 190,120 C205,95 190,75 160,80 L100,95 C70,100 60,120 70,140 C80,160 65,175 40,150 Z" />
+                <circle class="circuit-marker" cx="140" cy="60" r="4" />
+                <circle class="circuit-marker" cx="280" cy="180" r="4" />
+                <circle class="circuit-marker" cx="100" cy="95" r="4" />
+            </svg>
+        </div>
+        <img src="img/ferrari-emblem-logo-png_seeklogo-53763.png" alt="Logo Ferrari">
+        <h1>Scuderia Ferrari HP</h1>
+        <p class="header-meta"><strong>Maranello, Itália</strong> · Fundada em 1929</p>
+    </header>
+
+    <nav class="tabs">
+        <button class="tab-button active" data-tab="historia">História</button>
+        <button class="tab-button" data-tab="titulos">Títulos</button>
+        <button class="tab-button" data-tab="idolos">Ídolos</button>
+        <button class="tab-button" data-tab="linha-tempo">Linha do Tempo</button>
+        <button class="tab-button" data-tab="curiosidades">Curiosidades</button>
+        <button class="tab-button" data-tab="galeria">Galeria</button>
+        <button class="tab-button" data-tab="saiba-mais">Saiba Mais</button>
+    </nav>
+
+    <main>
+        <canvas id="tab-transition-canvas" aria-hidden="true"></canvas>
+
+        <section id="historia" class="tab-content active">
+            <h2>História</h2>
+            <p>A <strong>Scuderia Ferrari</strong> foi fundada em 1929 por <em>Enzo Ferrari</em> e tornou-se a equipe de corrida da <em>Alfa Romeu</em>. Em 1938, a Alfa Romeo tomou a decisão de entrar nas corridas com seu próprio nome, que institui a organização <em>Alfa Corse</em>, que absorveu o que tinha sido a Ferrari. Enzo Ferrari não concordou com esta mudança na política e foi, finalmente, demitido pela Alfa em 1939. Os termos de sua saída proibiu-o de participar do automobilismo em seu próprio nome, por um período de quatro anos.</p>
+            <p>Em 1950, o <strong>Campeonato Mundial de Fórmula Um</strong> foi estabelecido, e a Scuderia Ferrari entrou nesta primeira temporada. <em>É a única equipe a ter competido em todas as temporadas do mundial, desde o início até os dias atuais</em>. Na verdade, a equipe da Ferrari perdeu a primeira corrida do campeonato, o <strong>Grande Prêmio da Grã-Bretanha de 1950</strong>, devido a uma disputa sobre o <em>"dinheiro inicial"</em> pago aos participantes, a equipe estreou no <strong>Grande Prêmio de Mônaco de 1950</strong> com a <em>125 F1</em>, ostentando uma versão <em>supercharger do 125 V12</em> e três experientes e bem-sucedidos pilotos, <em>Alberto Ascari, Raymond Sommer e Luigi Villoresi</em>. A equipe mudou mais tarde para motores naturalmente aspirados nos modelos 275, 340, e 375. A equipe Alfa Romeo dominou a temporada de 1950, ganhando todas os onze corridas que entrou (seis corridas do campeonato mundial e cinco corridas não oficiais), mas a Ferrari quebrou a hegemonia em 1951 quando o piloto argentino <em>José Froilán González</em> venceu o Grande Prêmio da Grã-Bretanha.</p>
+        </section>
+
+        <section id="titulos" class="tab-content">
+            <canvas class="halftone-canvas" aria-hidden="true"></canvas>
+            <h2>Principais Títulos</h2>
+            <div class="stats-grid">
+                <div class="stat">
+                    <span class="stat-number" data-target="15">0</span>
+                    <span class="stat-label">Títulos de Pilotos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="16">0</span>
+                    <span class="stat-label">Títulos de Construtores</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="240" data-suffix="+">0</span>
+                    <span class="stat-label">Vitórias em Grandes Prêmios</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="803">0</span>
+                    <span class="stat-label">Pódios</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="246">0</span>
+                    <span class="stat-label">Pole Positions</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="259">0</span>
+                    <span class="stat-label">Voltas mais rápidas</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="1000" data-suffix="+">0</span>
+                    <span class="stat-label">Grandes Prêmios disputados — a primeira e única equipe a alcançar essa marca</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="idolos" class="tab-content">
+            <h2>Principais Ídolos</h2>
+            <div class="idols-grid">
+                <article class="idol-card">
+                    <h3>Michael Schumacher</h3>
+                    <p>5 títulos do campeonato de pilotos<br>75 vitórias em GP's</p>
+                </article>
+                <article class="idol-card">
+                    <h3>Niki Lauda</h3>
+                    <p>2 títulos do campeonato de pilotos<br>15 vitórias em GP's</p>
+                </article>
+                <article class="idol-card">
+                    <h3>Kimi Räikkönen</h3>
+                    <p>1 título do campeonato de pilotos<br>10 vitórias em GP's</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="linha-tempo" class="tab-content">
+            <h2>Linha do Tempo</h2>
+            <div class="timeline-wrap">
+                <span class="timeline-marker"></span>
+                <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <div class="timeline-content">
+                        <span class="timeline-year">1929</span>
+                        <p>Enzo Ferrari funda a Scuderia Ferrari em Modena, como equipe de corrida da Alfa Romeo.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <div class="timeline-content">
+                        <span class="timeline-year">1939</span>
+                        <p>Enzo Ferrari deixa a Alfa Romeo após um desentendimento e é proibido de correr com seu próprio nome por quatro anos.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <div class="timeline-content">
+                        <span class="timeline-year">1947</span>
+                        <p>Surge o primeiro carro a levar o nome Ferrari, a 125 S, construído na nova fábrica em Maranello.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <div class="timeline-content">
+                        <span class="timeline-year">1950</span>
+                        <p>A Scuderia Ferrari estreia no primeiro Campeonato Mundial de Fórmula 1, no GP de Mônaco.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <div class="timeline-content">
+                        <span class="timeline-year">1951</span>
+                        <p>José Froilán González conquista a primeira vitória da Ferrari na F1, no GP da Grã-Bretanha.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <div class="timeline-content">
+                        <span class="timeline-year">1961</span>
+                        <p>A Ferrari conquista seu primeiro título de Construtores da Fórmula 1.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <div class="timeline-content">
+                        <span class="timeline-year">1975–1977</span>
+                        <p>Niki Lauda conquista dois títulos de pilotos pela Ferrari, consolidando a equipe como força dominante.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <div class="timeline-content">
+                        <span class="timeline-year">1996</span>
+                        <p>Michael Schumacher chega à Ferrari, dando início à reconstrução da equipe rumo ao topo.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2000–2004</span>
+                        <p>Era dominante de Schumacher: cinco títulos de pilotos consecutivos e domínio quase total da categoria.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2007–2008</span>
+                        <p>Kimi Räikkönen conquista o último título de pilotos da Ferrari até hoje; no ano seguinte vem o último título de construtores.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2026</span>
+                        <p>A Scuderia Ferrari HP segue como a equipe mais vitoriosa da história da Fórmula 1, em busca de voltar ao topo do mundial.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section id="curiosidades" class="tab-content">
+            <h2>Curiosidades</h2>
+            <p>Mesmo estando na Fórmula 1 desde <em>1950</em> e sendo a mais vitoriosa da categoria, a Scuderia de Maranello <strong>não ganha o título mundial de pilotos desde de 2007 e o de contrutores desde de 2008</strong>. Já são <em>17 anos</em> sem se sair vitoriosa, e nesse tempo viu suas principais rivais dominarem a cadegoria.</p>
+            <p>Outra curiosidade da equipe do <em>Cavallo Empinado</em> é de que a cada vitória da marca em alguma categoria do automobilismo, uma bandeira da equipe é asteada na frente de sua fábrica.</p>
+        </section>
+
+        <section id="galeria" class="tab-content">
+            <h2>Carros por Década</h2>
+            <div class="gallery-grid">
+                <button type="button" class="gallery-item" data-file="img/cars/125-f1.jpg" data-model="Ferrari 125 F1 (1950)" data-caption="O primeiro carro da Ferrari a competir na Fórmula 1, com motor V12 sobrealimentado.">
+                    <img src="img/cars/125-f1.jpg" alt="Ferrari 125 F1, 1950" loading="lazy">
+                    <span class="gallery-placeholder">Adicione a foto em<br><code>img/cars/125-f1.jpg</code></span>
+                    <span class="gallery-overlay">
+                        <span class="gallery-era">Anos 1950</span>
+                        <span class="gallery-model">Ferrari 125 F1</span>
+                    </span>
+                </button>
+                <button type="button" class="gallery-item" data-file="img/cars/156-sharknose.jpg" data-model="Ferrari 156 'Sharknose' (1961)" data-caption="Levou a Ferrari ao primeiro título de Construtores da história do campeonato.">
+                    <img src="img/cars/156-sharknose.jpg" alt="Ferrari 156 Sharknose, 1961" loading="lazy">
+                    <span class="gallery-placeholder">Adicione a foto em<br><code>img/cars/156-sharknose.jpg</code></span>
+                    <span class="gallery-overlay">
+                        <span class="gallery-era">Anos 1960</span>
+                        <span class="gallery-model">Ferrari 156 "Sharknose"</span>
+                    </span>
+                </button>
+                <button type="button" class="gallery-item" data-file="img/cars/312t.jpg" data-model="Ferrari 312T (1975)" data-caption="O carro de Niki Lauda na conquista de dois títulos mundiais de pilotos.">
+                    <img src="img/cars/312t.jpg" alt="Ferrari 312T, 1975" loading="lazy">
+                    <span class="gallery-placeholder">Adicione a foto em<br><code>img/cars/312t.jpg</code></span>
+                    <span class="gallery-overlay">
+                        <span class="gallery-era">Anos 1970</span>
+                        <span class="gallery-model">Ferrari 312T</span>
+                    </span>
+                </button>
+                <button type="button" class="gallery-item" data-file="img/cars/126c2.jpg" data-model="Ferrari 126C2 (1982)" data-caption="Representante da era turbo, um dos carros mais potentes e desafiadores da história da equipe.">
+                    <img src="img/cars/126c2.jpg" alt="Ferrari 126C2, 1982" loading="lazy">
+                    <span class="gallery-placeholder">Adicione a foto em<br><code>img/cars/126c2.jpg</code></span>
+                    <span class="gallery-overlay">
+                        <span class="gallery-era">Anos 1980</span>
+                        <span class="gallery-model">Ferrari 126C2</span>
+                    </span>
+                </button>
+                <button type="button" class="gallery-item" data-file="img/cars/f310.jpg" data-model="Ferrari F310 (1996)" data-caption="O primeiro carro de Michael Schumacher pela Ferrari, início da reconstrução da equipe.">
+                    <img src="img/cars/f310.jpg" alt="Ferrari F310, 1996" loading="lazy">
+                    <span class="gallery-placeholder">Adicione a foto em<br><code>img/cars/f310.jpg</code></span>
+                    <span class="gallery-overlay">
+                        <span class="gallery-era">Anos 1990</span>
+                        <span class="gallery-model">Ferrari F310</span>
+                    </span>
+                </button>
+                <button type="button" class="gallery-item" data-file="img/cars/f2004.jpg" data-model="Ferrari F2004 (2004)" data-caption="Considerado um dos carros mais dominantes da história da F1, venceu 15 das 18 corridas da temporada.">
+                    <img src="img/cars/f2004.jpg" alt="Ferrari F2004, 2004" loading="lazy">
+                    <span class="gallery-placeholder">Adicione a foto em<br><code>img/cars/f2004.jpg</code></span>
+                    <span class="gallery-overlay">
+                        <span class="gallery-era">Anos 2000</span>
+                        <span class="gallery-model">Ferrari F2004</span>
+                    </span>
+                </button>
+                <button type="button" class="gallery-item" data-file="img/cars/sf71h.jpg" data-model="Ferrari SF71H (2018)" data-caption="Carro da era turbo-híbrida moderna, pilotado por Sebastian Vettel e Kimi Räikkönen.">
+                    <img src="img/cars/sf71h.jpg" alt="Ferrari SF71H, 2018" loading="lazy">
+                    <span class="gallery-placeholder">Adicione a foto em<br><code>img/cars/sf71h.jpg</code></span>
+                    <span class="gallery-overlay">
+                        <span class="gallery-era">Anos 2010</span>
+                        <span class="gallery-model">Ferrari SF71H</span>
+                    </span>
+                </button>
+                <button type="button" class="gallery-item" data-file="img/cars/sf-24.jpg" data-model="Ferrari SF-24 (2024)" data-caption="Representante da geração atual da Scuderia, em busca do retorno ao topo do mundial.">
+                    <img src="img/cars/sf-24.jpg" alt="Ferrari SF-24, 2024" loading="lazy">
+                    <span class="gallery-placeholder">Adicione a foto em<br><code>img/cars/sf-24.jpg</code></span>
+                    <span class="gallery-overlay">
+                        <span class="gallery-era">Anos 2020</span>
+                        <span class="gallery-model">Ferrari SF-24</span>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <section id="saiba-mais" class="tab-content">
+            <h2>Saiba Mais</h2>
+            <p>Acesse a página oficial da Ferrari para acompanhar as novidades e conquistas da equipe italiana:</p>
+            <a href="https://www.ferrari.com/en-EN/formula1">Página Oficial da Scuderia Ferrari</a>
+            <p>Visite também a página do Instagram:</p>
+            <a href="https://www.instagram.com/scuderiaferrari/">Instagram oficial da Scuderia Ferrari HP</a>
+        </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" hidden>
+        <button type="button" class="lightbox-close" aria-label="Fechar imagem ampliada">&times;</button>
+        <figure class="lightbox-figure">
+            <img class="lightbox-img" src="" alt="">
+            <figcaption>
+                <span class="lightbox-model"></span>
+                <span class="lightbox-caption"></span>
+            </figcaption>
+        </figure>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
